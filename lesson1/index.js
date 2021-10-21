@@ -11,7 +11,7 @@
 
 const city = 'Vladimir',
       country = 'Russia'
-      population = '350000';
+      population = 350000;
       stadium = true;
 
 
@@ -26,8 +26,8 @@ const city = 'Vladimir',
     ps: каждая сущность должна находиться в отдельной переменной
 */
 
-let weight = '70';
-let height = '40';
+let weight = 70;
+let height = 40;
 
 let resoult2 = weight + height;
 
@@ -51,8 +51,7 @@ console.log(typeof resoult2);
 let time = 2;
 let speedOfFirst = 95;
 let speedOfSecond = 114;
-let speedFull = speedOfFirst + speedOfSecond;
-let distance = speedFull * time;
+let distance = (speedOfFirst + speedOfSecond) * time;
 
 console.log(distance);
 
@@ -74,9 +73,9 @@ const randomNumber = Math.floor(Math.random() * 100);
 if (randomNumber < 20) {
    console.log("randomNumber меньше 20");
 } else if (randomNumber > 50) {
-console.log("randomNumber больше 50");
+    console.log("randomNumber больше 50");
 } else {
-console.log("randomNumber больше 20, и меньше 50");
+    console.log("randomNumber больше 20, и меньше 50");
 }
 
 /* 
@@ -86,13 +85,14 @@ console.log("randomNumber больше 20, и меньше 50");
 */
 
 
-switch(randomNumber) {
-    case 20 :
-    console.log("randomNumber меньше 20");
-    break;
-    case 50 :
-    console.log("randomNumber больше 50");
-    break;
-    default :
-    console.log("randomNumber больше 20, и меньше 50");
+switch(true) {
+    case randomNumber < 20:
+        console.log("randomNumber меньше 20");
+        break;
+    case randomNumber > 50:
+        console.log("randomNumber больше 50");
+        break;
+    default:
+        console.log("randomNumber больше 20, и меньше 50");
+        break;
     }
