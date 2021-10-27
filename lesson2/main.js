@@ -97,7 +97,7 @@ const showName = (firstName, lastName) => {
     const fullName = "${firstName} ${lastName}";
     console.log(fullName);
 };
-showName('Andrey', 'Lukyanov');
+showName('Андрей', 'Лукьянов');
 
 /* 
     Задание 5:
