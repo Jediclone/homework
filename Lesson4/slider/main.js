@@ -12,17 +12,16 @@ const activeSlide = n => {
     slides[n].classList.add('active');
 }
 
-const prepareCurrentSlide = ind => {
-    activeSlide(index);
-    activeDot(index);
-}
-
-
 const activeDot = n => {
     for (dot of dots) {
         dot.classList.remove('active');
     }
     dots[n].classList.add('active');
+}
+
+const prepareCurrentSlide = ind => {
+    activeSlide(index);
+    activeDot(index);
 }
 
 const nextSlide = () => {
@@ -52,4 +51,7 @@ dots.forEach((item, indexDot) => {
     })
 })
 
-setInterval(nextSlide, 2000);
+setInterval(nextSlide, 2000); //автоматизация переключения
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
